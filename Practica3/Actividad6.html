@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>El primer script</title>
+
+<body>
+  <script type= "text/javascript">
+  var nr;
+  nr=prompt('Ingrese un numero(1-10)','');
+  nr=parseInt(nr);
+
+  var x=0;
+
+  for (x = 1; x <= 10; x++)
+  {
+  	tabel=nr*x;
+  	document.write("<tr><td>");
+  	document.write(nr+"x"+x+"="+ tabel + "<br>");
+  	document.write("</td></tr>");
+  }
+
+
+  </script>
+</body>
+</html>
