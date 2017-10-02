@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2</title>
+    <style type="text/css">
+    /* Header */
+    header h1{
+      color:blue;
+    }
+     article h1{
+       color:orange;
+     }
+     article p:nth-of-type(odd){background:yellow;
+     }
+     article #imagen:last-child{
+       color:red;
+     };
+
+     * {
+       font-family: Times, Garamond, Courier;
+     }
+     #japo {
+       
+       font-size: 24px;
+       color: red;
+       opacity: .7;
+     }
+     b.destacado {
+       color: red;
+       opacity: .7;
+       font-weight: bold;
+     }
+     .destacado {
+       color: blue;
+       opacity: .7;
+       font-weight: bold;
+     }
+     span:nth-last-of-type {
+       color: blue;
+       opacity: .7;
+     }
+
+     i {
+       font-weight: bold;
+       color: green;
+       opacity: .7;
+     }
+     article.imagen {
+       color:red;
+     }
+
+     /* unvisited link */
+      a:link {
+        color: green;
+}
+/* visited link */
+      a:visited {
+        color: gray;
+}
+    /* mouse over link */
+        a:hover {
+        color: black;
+}
+
+          footer>span{
+           color: red;
+}
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <h1>¿Qué hay detrás de la palabra Pokémon?</h1>
+    </header>
+    <article>
+      <h1>Etimología</h1>
+      <p> La palabra Pokémon es la contracción romanizada de la marca japonesa <b class="destacado">Pocket Monsters</b> (<span id="japo">ポケットモンスター Poketto Monsutā?</span>, literalmente <i>"monstruos de bolsillo"</i>), como tales contracciones son muy comunes en Japón.</p>
+      <p> En inglés, la palabra se escribe Pokémon con tilde en acento agudo, a pesar de que este signo no existe en el uso habitual de este idioma. Esto se debe a que al unir las palabras Pocket Monster se obtuvo Poke-Mon.
+        El problema es que, según las normas del inglés, esto se pronunciaría como pouk mon.
+        En muy pocos otros casos (como maté que se pronuncia <span>/mátei/</span> y quiere decir mate) se puede poner en inglés un acento en la <i>"e"</i> para que ésta se pronuncie, resultando así el nombre <i>"Pokémon"</i>. En español se puede usar la transcripción rōmaji que prescinde del acento por razones ortográficas, si bien en el uso comercial habitualmente aparece usando tilde.</p>
+      <p> Sobre la pronunciación de los hispanohablantes en el caso de América Latina, por el doblaje del anime, que suele ser más cercano al estadounidense, se pronuncia <span>/pokemón/</span>. En España se pronuncia <span>/pokemon/</span>.</p>
+      <p> El término Pokémon, además de referirse a la franquicia en sí, puede aludir colectivamente a las <span class="destacado">721 especies ficticias</span> que han aparecido en los diversos medios de la franquicia. Como marca registrada es invariable: <a href="http://www.pokemon.com/es/">los Pokémon</a>.
+        Como voz lexicalizada, ya escrita en minúscula y sin tilde, si nos atenemos a su pronunciación original, pluralizaría según la RAE en -es: los pokémones </p>
+    </article>
+    <article class="imagen">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/TOYOTA_ist_Pikachu_Car.jpg/200px-TOYOTA_ist_Pikachu_Car.jpg" alt="imagenCochePokemon"></img>
+      <p> Imagen de coche decorado como un Pokémon </p>
+    </article>
+  <footer>
+    <span>Fuente:</span>
+    <a href="https://es.wikipedia.org/wiki/Pok%C3%A9mon"><span>Enlace de Wikipedia a Pokémon</span></a>
+  </footer>
+  </body>
+</html>
