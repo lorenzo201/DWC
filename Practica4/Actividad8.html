@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad8 practica4</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+  var string=prompt("Introduce el nombre:");
+  var str1 =prompt("Introduce el apellido:");
+  function concatena(string,str1){
+      var concatenaStr=string+"  "+str1;
+      return concatenaStr;
+  }
+  function BuenosDias(concatena,nombre){
+    var salida=concatena("Buenos dias",nombre);
+    alert(salida);
+  }
+
+  BuenosDias(concatena,string+str1);
+
+  </script>
+  </body>
+</html>
