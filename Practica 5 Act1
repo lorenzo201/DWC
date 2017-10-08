@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica 5 Actividad</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function generaSurtido(){
+      var surtido=("Periodicos","revistas","libros","Refrescos","Tabaco","chuches","mecheros","albumes");
+        return surtido;
+      }
+    function consultaPrecios(indice){
+      var precio=(2,1,3,1,3,1,1,3);
+        return precio[indice];
+}
+  function mostrarSurtidoPrecio(surtido){
+    document.write('<table>');
+    document.write('<tr>');
+     for (var i = 0; i < surtido.length; i++) {
+       if(consultaPrecios(i)>0){
+         //me falla el primer document.write y nose cual es el fallo
+          document.write('<th><img width="80px"  src=' +surtido[i]+ '.png'   'alt='+surtido[i]+"" '</th>');
+          document.write(consultaPrecios(i)+  "€");
+        }
+      }
+      document.write('</tr>');
+      document.write('</table>');
+      }
+  //  function mostrarTodo(){
+    //  document.write('<img')
+    }
+
+  var surtido=generaSurtido();
+    mostrarSurtidoPrecio(surtido);
+
+    </script>
+    <center>
+    <h2>¿Quieres conocer nuestros surtidos?</h2>
+    <h2>Pulsa sobre la imagen</h2>
+
+      <a href="ActividadKiosco.html"><img src="principal.png" border="0" /></a>
+  </center>
+
+  </body>
+</html>
