@@ -1,0 +1,33 @@
+.normal {
+  width: 250px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+.normal tr, .normal td {
+  border: 1px solid #000;
+}
+
+/*Las filas pares tienen un fondo de color gris*/
+td{
+    background-color:#f2f2f2;
+}
+/*La leyenda de la tabla tiene un estilo propio */
+  caption {
+    caption-side : bottom;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:italic;
+    font-size:14px;
+  }
+
+/*Las imágenes están incluidas en el fondo y son de tamaño 50px x 50px*/
+#destacada {
+  width: 50px;
+  height: 50px;
+
+}
+
+/*Cuando pulsamos sobre las filas con los iconos, el fondo cambia al color
+#FFFF66 para indicar que las celdas incluyen un enlace con las url’s de los estándares */
+td.rollover:hover{
+   background-color:#FFFF66;
+  }

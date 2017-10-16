@@ -1,0 +1,64 @@
+/*El elemento #cabecera debe tener un relleno de 1em en todos los lados.*/
+#cabecera{
+  padding:1em;
+}
+/*El elemento #menu debe tener un relleno de 0.5em en todos los lados y un margen inferior de 0.5em.*/
+#menu{
+  padding:0.5em;
+  margin-bottom: 0.5em;
+
+}
+/*El resto de elementos (#noticias, #patrocinadores, #principal, #secundario) deben tener 0.5em de relleno en
+todos sus lados,
+salvo el elemento #pie, que sólo debe tener relleno en la zona superior e inferior.*/
+#noticias,#patrocinadores,#principal,#secundario{
+  padding:0.5em;
+}
+
+#pie{
+  padding-top: 0.5em;
+  padding-bottom:0.5em;
+}
+
+/*Los elementos de la clase articulo deben mostrar una separación entre ellos de 1em.*/
+.articulo{
+  margin:1em;
+}
+
+/*Las imágenes de los artículos muestran un margen de 0.5em en todos sus lados.*/
+.articulo img{
+  margin:0.5em
+}
+/*El elemento #patrocinadores está separado 1em de su elemento superior.*/
+#patrocinadores{
+  padding-top: 1em;
+}
+/*El elemento #pie debe tener un margen superior de 1em.*/
+#pie{
+  margin-top: 1em;
+}
+/*Eliminar el borde gris que muestran por defecto todos los elementos.*/
+#cabecera,#menu,#lateral,#contenido,#contenido #principal,#contenido #secundario,#pie{
+  border-style:none;
+}
+/*El elemento #menu debe tener un borde inferior de 1 píxel y azul (#004C99).*/
+#menu{
+  border-bottom:  0.5px solid  #004C99;
+
+}
+/*El elemento #noticias muestra un borde de 1 píxel y gris claro (#C5C5C5).*/
+#noticias{
+  border:1px solid   #C5C5C5;
+
+}
+
+/*El elemento #patrocinadores debe mostrar un borde discontinuo de 1 píxel y de color #CC6600.*/
+#patrocinadores{
+  border: 1px dotted  #CC6600;
+  ;
+}
+
+/*El lateral formado por el elemento #secundario muestra un borde de 1 píxel y de color #CC6600.*/
+#contenido #secundario {
+  border: 1px solid #CC6600;
+}

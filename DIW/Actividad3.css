@@ -1,0 +1,23 @@
+a { margin: 1em 0; float: left; clear: left; }
+.pdf { color:  #E37529;
+  padding: 0 0 0 18px;
+   background: #FFF url(../img/pdf.png) no-repeat left center;
+}
+/*Incluye esta imagen de fondo para la web: http://www.fandroides.com/wp-content/uploads/2014/05/wall4.jpg
+ Modifica la letra del cuerpo y de los enlaces para que sean de color amarillo.*/
+body {
+   background-image: url(imagen1.jpg);
+   color:yellow;
+
+}
+.pdf{
+  color:yellow;
+}
+
+/* Modifica h1 para que tenga como fondo esta imagen:
+ https://1.bp.blogspot.com/_sD9yQTE5QZQ/SGvRFJbT6QI/AAAAAAAADg4/5Ot2aTA4_w/s400/blue1961.jpg. Es necesario que
+la imagen se repita horizontalmente para cubrir todo el h1. Modifica h1 para incluir color de borde y letra blanco */
+h1 .pdf{
+  background-image:url(blue.jpg);
+  background-repeat: repeat-x;
+}
