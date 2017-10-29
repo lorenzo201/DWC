@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 7</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*a. Multiplicar por 2 cada elemento del array a que has empleado en el
+    ejercicio 4c (var a = [4, 21, 33, 12, 9, 54];). Muestra el array por pantalla.
+    b. Imprimir por pantalla el array resultante del ejercicio 6 (indica el índice y
+    los atributos del objeto correspondiente al elemento en el que estamos). */
+
+    /*a*/
+    var a= [4, 21, 33, 12, 9, 54];
+    a.forEach(function(num){
+      document.write(num*2+" ");
+    });
+
+    /*b*/
+    var array =[9,true,"trif","lorenzo",8,true];
+    array.forEach(function(num, indice, array) {
+      document.write("<br> El Indice"+indice+"esta en["+array+"y es el numero:"+num+" <br>");
+    });
+
+      </script>
+  </body>
+</html>

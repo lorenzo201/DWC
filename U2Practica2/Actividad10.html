@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 10</title>
+  </head>
+  <body>
+    <input type="button" onclick="ActivarReloj()" id="botonActivar" value="Activar Reloj"/>
+    <input type="button" onclick="DetenerReloj()" value="Detener Reloj"/>
+    <script>
+    /*a. El primero debe activar que se muestre la hora por consola.
+    b. El segundo debe parar que se muestre la hora por consola.*/
+
+    function ActivarReloj(){
+        var hora=new Date();
+         console.log(hora.toLocaleTimeString());
+       ahoraSonLas = setTimeout(ActivarReloj,1000);
+   }
+
+   function DetenerReloj(){
+       clearTimeout(ahoraSonLas);
+   }
+</script>
+  </body>
+</html>

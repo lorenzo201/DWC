@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*Solicite al usuario la fecha de las próximas vacaciones con un formato string
+    tipo “aaaa-mm-dd” o “aaaa/mm/dd”*/
+    var vacaciones=prompt("Introduce la fecha de tus proximas vacaciones con un formato string tipo “aaaa-mm-dd” o “aaaa/mm/d:");
+    /*b. Convierte la fecha anterior en un objeto Date y calcula cuántos milisegundos
+    quedan hasta esa fecha*/
+    /* var fecha= new Date();
+    var fech=fecha.getUTCMilliseconds();
+    console.log(fech);*/
+    var fecha=new Date(vacaciones);
+    var fechaActual=new Date();
+
+    var diff = fecha- fechaActual;
+    console.log(diff/(1000*60*60*24) );
+                // (1000*60*60*24) --> milisegundos -> segundos -> minutos -> horas -> días
+    var x=fecha.getUTCMilliseconds();
+    var y=fechaActual.getUTCMilliseconds();
+
+    console.log(y-x);
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 6</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*a. A partir de dicho array, utilizando map(), genera otro array con dichos
+    valores convertidos todos a número.
+    b. Utiliza filter para no incluir en el array final los elementos que no hayan
+    podido ser convertidos (NaN).
+    c. Imprime dicho array resultante por consola*/
+
+    /*a*/
+     var array =[9,true,"trif","lorenzo",8,true];
+     console.log(array.map(function(num){
+     return parseInt(num);
+   }));
+
+    /*b*/
+    console.log(array.filter(function(num){
+      return num !== NaN;
+  }));
+
+  /*c*/
+  console.log(array.filter(function(num){
+    return num;
+  }));
+
+    </script>
+
+  </body>
+</html>

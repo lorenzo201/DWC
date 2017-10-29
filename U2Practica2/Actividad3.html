@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var array= new Array(4);
+    array[0]="Elemento 1";
+    array[1]="Elemento 2";
+    array[2]="Elemento 3";
+    array[3]="Elemento 4";
+
+    /*Concatena 2 elementos más al final y 2 al principio*/
+    array.push(6,7);
+    array.unshift(0.0,0.5);
+    /*Muestra por consola el resultado después de aplicar cada uno utilizando
+    toString()*/
+    console.log(array.toString());
+    /*d. Elimina las posiciones de la 3 a la 5 (incluidas)*/
+    console.log(array.slice(3,6));
+
+    /*e. Inserta el número 10 y el 25 entre el penúltimo y el último*/
+    array.splice(7,0,"10","25");
+    console.log(array);
+    /*f. Muestra el array del paso anterior, pero con los elementos separados por
+    "==>" utilizando join().*/
+    console.log(array.join("==>"));
+    /*g. Copia el array anterior en otra variable e invierte el orden de los elementos
+    con esa segunda variable*/
+    arrayInvertido=array.reverse();
+    console.log(arrayInvertido);
+    /*h. Muestra los dos arrays (directamente, sin join() ni toString()). ¿Puedes explicar
+    qué ha pasado con los dos arrays y por qué?*/
+    /*Me muestra los 2 arrays de manera invertida*/
+    console.log(array,arrayInvertido);
+    /*i. Consulta en qué índice del array está el 25 y en qué índice está un elemento
+    que no esté en el array.*/
+
+      console.log(" El indice del array que esta en el 25 es: "+array.indexOf(25));
+
+
+    </script>
+
+  </body>
+</html>
