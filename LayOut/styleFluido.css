@@ -1,0 +1,163 @@
+/*Reseteamos las cajas*/
+* {
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  text-align: center;
+}
+
+.container{
+  margin: auto;
+  width: 100%;
+}
+
+/*Cabecera*/
+/*.header se comporta como una tabla*/
+.menuPrincipal{
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+  float:right;
+
+
+}
+div.header{
+  width:100%;
+  height: 20%;
+  background-color:lightblue;
+  display: table; /*Compórtate como una tabla*/
+  padding: 10px;
+}
+/*div.logo y h1 se comportan como celdas de la tabla*/
+.logo{
+  display: table-cell;
+  vertical-align: middle;
+}
+.logo img{
+  width: 80px;
+}
+.h1 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-color:lightblue;
+  text-transform: capitalize;
+  font: bold 2em Helvetica, sans-serif;
+}
+
+/*Barra menú horizontal*/
+/*Menú horizontal: Formato básico*/
+.menu{
+  text-align: left;
+  background: gray;
+  /*
+  Si la cabecera estuviera hecha con flotantes,
+  necesitaría poner esto en el siguiente nivel:
+  clear:both;
+  */
+  width:100%;
+  padding: 5px;
+}
+/*Común a todos los menús*/
+li a{
+  text-decoration: none;
+  color: black;
+}
+
+/*Menú horizontal:
+Formato primer nivel del menú*/
+div.menu > ul > li{
+  list-style-type: none;
+  padding-left: 20px;
+  display:inline-block;
+  position:relative;
+}
+
+/*Ocultamos el segundo nivel*/
+li ul {
+  display: none;
+}
+
+/*Dejamos que se muestre el segundo nivel
+si hay un :hover mostrándolo como bloque.
+Ponemos:
+-posición absoluta
+-ancho fijo
+-desplazamiento izqda
+*/
+.menu li:hover > ul{
+  display: block;
+  position: absolute;
+  width: 120px;
+  left: 5px;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+
+/*Formateamos el segundo nivel del menú*/
+.menu li ul li:hover {
+  color: gray;
+  list-style-type: disc;
+}
+
+
+
+/*Menú lateral: formato básico*/
+.nav ul li{
+  list-style-type: square;
+  list-style-position: inside;
+}
+.MenuSecundario{
+  background-color: lightgrey;
+  width:20%;
+  height: 50px;
+  float:right;
+  padding: 5px;
+}
+.nav ul{
+  padding: 1%;
+}
+
+
+/*Dejamos que se muestre el segundo nivel
+si el ratón se pone encima
+- Dejamos que se muestre con display:block
+- Desplazamos a la izquierda
+*/
+.nav li:hover > ul{
+    display:block;
+    left: 3px;
+    background-color: lightyellow;
+}
+/*Formateamos el segundo nivel del menú lateral*/
+.nav li ul li:hover {
+  color: orange;
+  text-decoration: orange underline;
+}
+
+
+/*Cuerpo: el div que sirve de contenedor*/
+/*Es flotante y con ancho %*/
+.cuerpo{
+  border-left: 5px ;
+  text-align: justify;
+  padding:10%;
+  float:left;
+  width:80%;
+  height: 400px;
+}
+
+
+/*Pie*/
+/*Impide que existan flotantes y con ancho %*/
+.footer{
+  line-height: 150%;
+  width:100%;
+  clear:both;
+  background-color: gray;
+  text-align: center;
+}

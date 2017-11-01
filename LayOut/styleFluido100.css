@@ -1,0 +1,165 @@
+
+/*reseteo de cajas*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+
+header{
+  width:100%;
+  height: 20%;
+  background-color:lightblue;
+  display: table;
+  padding: 10px;
+  position: static;
+
+}
+h1.cabecera{
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  background-color:lightblue;
+  text-transform: capitalize;
+  font: bold 36px Helvetica;
+}
+h1{
+    font: bold 24px Verdana;
+}
+h2{
+  font: bold 14px Verdana;
+}
+.logo{
+    display: table-cell;
+    vertical-align: middle;
+  }
+/*tamaño imagen*/
+  .logo img{
+    width: 80px;
+    padding: 15px;
+    /*al poner min-widht es lo minimo que puede hacerse la foto.*/
+    min-width:80px;
+    max-width: 80px;
+  }
+  /*Común a todos los menús*/
+  li a{
+    text-decoration: none;
+    color: black;
+  }
+  .container{
+    margin: auto;
+    width: 95%;
+
+  }
+.menuPrincipal{
+ float:left;
+ left:50%;
+ list-style-type:none;
+ margin:0 auto;
+ padding:0;
+ position:relative;
+}
+
+.menuPrincipal li {
+ float:left;
+ position:relative;
+ right:30%;
+ margin:10px;
+}
+
+/*quita los puntitos de los enlaces*/
+.menuPrincipal ul li{
+    list-style: none;
+    display: inline-block;
+  }
+  .menuPrincipal li:hover >a{
+
+    font-style: italic;
+
+  }
+.MenuSecundario ul li{
+  list-style: none;
+  text-align: middle;
+}
+
+.boton_personalizado{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #1883ba;
+
+
+}
+.MenuSecundario{
+  background-color: lightgrey;
+  width:25%;
+  height: 50px;
+  float:right;
+  text-align: middle;
+  padding: 2px;
+  margin:10px;
+
+}
+/*Pone una linea debajo de las letras*/
+.MenuSecundario li:hover >a{
+  font-style: italic;
+  text-align: middle;
+
+
+}
+.container{
+  margin: auto;
+  /*Pongo un max-width cuando quiero imponer un máximo*/
+  /*max-width: 960px;*/
+  width: 100%;
+}
+/*cuerpo*/
+.cuerpo{
+  background-color: linen;
+  text-align: middle;
+  padding:1%;
+  float:left;
+  width:70%;
+  height: 425px;
+  border:1px solid grey;
+  margin:10px;
+  border-collapse: separate;
+
+}
+div .Comentarios{
+  color:blue;
+  float: right;
+}
+/*cuerpo*/
+.entrada2{
+  background-color: linen;
+  text-align: middle;
+  padding:1%;
+  float:left;
+  width:70%;
+  height: 200px;
+  border:1px solid grey;
+  margin:10px;
+
+}
+
+
+/*Pie*/
+/*Impide que existan flotantes y con ancho %*/
+.footer{
+  line-height: 150%;
+  border-top:2px solid grey;
+  width:100%;
+  clear:both;
+  text-align: center;
+  margin:0px;
+  position:static;
+  height: 50px;
+  margin-top: -50px;
+  padding:0px 0px 0px 0px;
+}
