@@ -1,0 +1,192 @@
+/*Reseteamos las cajas*/
+*	{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+ }
+
+/* Para que los nuevos elementos sean tratamos como block */
+section, footer, aside, nav, article, figure, figcaption,hgroup {
+	display: block;
+}
+
+.cabecera{
+	display: table;
+	width: 100%;
+	position:fixed;
+	z-index: 100;
+}
+
+/*div.logo y h1 se comportan como celdas de la tabla*/
+.logo{
+  display: table-cell;
+  vertical-align: middle;
+}
+.logo img{
+  width: 80px;
+}
+header > h1{
+	display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  background-color:lightblue;
+  text-transform: capitalize;
+  font: bold 2em Helvetica, sans-serif;
+}
+
+/*Centramos el elemento contenedor y alineamos normalmente dentro del contenedor*/
+body {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 960px;
+	width: 100%;
+	margin: auto;
+	height: auto;
+	text-align: left;
+	padding-top: 135px;
+	flex: 1;
+}
+
+.cabecera {
+	background: lightblue;
+	padding: 20px;
+}
+
+/* barra de navegación */
+.menu {
+	display: table-cell;
+	vertical-align: top;
+	padding-right: 1%;
+	text-align: right;
+}
+
+.menu li {
+	display: inline-block;
+	list-style: none;
+	padding: 0.5%;
+	font: bold 0.875em verdana, sans-serif;
+}
+
+.menu li a{
+	display:block;
+	padding: 10px;
+	color:#fff;
+	background-color: steelblue;
+}
+
+.menu li:hover a{
+	background-color: navy;
+}
+
+
+/*Aclaración inline-block: se comporta como un in-line
+pero el conjunto de inlines's ocupan todo el ancho como un block.
+Equivale a un float:left pero ahorramos el clear en el sig elemento.
+Más info: http://www.w3schools.com/css/css_inline-block.asp
+*/
+
+/* dos columnas para los bloques de section y aside */
+.seccion {
+	float: left;
+	width: 68%;
+	margin: 2%;
+}
+
+/* Pie a una columna */
+.pie {
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid #999999;
+	width: 100%;
+}
+
+
+/* últimos retoques */
+img{
+	width: 20%;
+	margin: 5px;
+}
+
+article {
+	border: 1px solid #999999;
+	padding: 2%;
+	margin-bottom: 15px;
+	background: linen;
+}
+
+article footer {
+	text-align: right;
+	color: steelblue;
+	font-weight: bold;
+}
+
+article header{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+article hgroup {
+	margin-bottom: 1%;
+}
+
+time {
+	color: #999999;
+}
+
+/*Formateo menús*/
+/*Común a todos los menús*/
+li a{
+  text-decoration: none;
+  color: black;
+	padding: 10px;
+}
+
+/*Menú lateral: */
+.menuLateral {
+	float: left;
+	width: 23%;
+	margin: 2% 0%;
+	padding: 2%;
+	background: #CCCCCC;
+}
+
+aside ul li{
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+aside ul{
+	padding-left: 1%;
+	display: none;
+}
+
+aside div:hover ul {
+    display:block;
+}
+
+aside ul li:hover{
+	color:blue;
+}
+
+/*Estilos de letra*/
+.cabecera h1{
+	font: bold 1.5em verdana, sans-serif;
+}
+
+article h1{
+	font: bold 1.25em verdana, sans-serif;
+}
+
+h2 {
+	font: bold 0.875em verdana, sans-serif;
+}
+
+figcaption {
+	font: italic 0.75em verdana, sans-serif;
+}
