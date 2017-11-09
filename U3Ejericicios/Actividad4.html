@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 4</title>
+    <script type="text/javascript">
+    /*A partir del código HTML que se propone, crea la función modificarSize empleando
+    únicamente querySelector y querySelectorAll. La función debe selecciona los h1 y
+    párrafos del documento para aplicar el tamaño escogido por el usuario cuando pulse
+    sobre “Cambiar”*/
+        onload= function(){
+        modificarSize= function(){
+        for (var i = 0; i < document.getElementsByTagName('h1').length; i++) {
+          document.querySelector('h1').style.fontSize=combo.value;
+}
+        for (var i = 0; i < document.getElementsByTagName('p').length; i++) {
+          document.querySelectorAll('p')[i].style.fontSize=combo.value;
+        }
+
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Modificar tamaño</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+    sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>Qué bonito que es Lorem ipsum. Voy a llorar de la emoción!</p>
+    <div>
+     <span>Seleccionar color:</span>
+     <select id="combo">
+     <option value="10px">Pequeño</option>
+     <option value="16px">Mediano</option>
+     <option value="24px">Grande</option>
+     </select>
+     <button onclick="modificarSize();">Cambiar</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad2</title>
+    <script type="text/javascript">
+    /*Cambia el contenido de los elementos h1*/
+    /*• Cambia los elementos con clase “destacado” y ponlos en negrita*/
+    /*• Oculta el elemento con id=”resultado”*/
+    /*• Selecciona el elemento con name “sugerencia” y añádele un atributo para que cumplimentar este elemento sea obligatorio*/
+    /*• Crea la función mostrar que permite mostrar el p con id resultado si pulsamos el botón*/
+    onload= function(){
+    document.body.children[0].innerHTML="Pon alguna sugerencia";
+
+    document.getElementsByClassName('destacado')[0].style.fontWeight="Bold";
+
+    document.getElementById('resultado').style.display="None";
+
+    document.getElementsByClassName('sugerencia')[0].setAtribute("required","required");
+
+    Mostrar=function(){
+      document.getElementsById('resultado').style.display="initial";
+    }
+
+}
+
+    </script>
+  </head>
+  <body>
+    <h1>Sugerencias</h1>
+    <form action="#" method="post">
+ <p class="destacado">Sugerencias:</p>
+ <br>
+ <textarea name="sugerencia" rows="20" cols="50"></textarea>
+ <button type="button" name="button"onclick="Mostrar()">Enviar</button>
+</form>
+  <p id="resultado">Gracias por participar</p>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ej Hola mundo hecho con nodos DOM</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*a. Modificar el texto de los 3 elementos del body referenciándolos a partir de document.body.*/
+    /*b. Modificar el title de la página*/
+    /*c. Modificar el color de los elementos de body a azul*/
+    /*d. Listar en la consola todos los hijos de body*/
+    /*e. Listar en la consola los hijos de tipo element de body*/
+    onload= function(){
+    document.body.children[0].innerHTML="Esto es un h1 nuevo1";
+    document.body.children[1].innerHTML="esto es un ejemplo nuevo1";
+    document.body.children[2].innerHTML="esto es un   div nuevo1";
+
+    document.head.children[0].innerHTML="Titulo nuevo con nodos DOM";
+
+    document.body.style.color="blue";
+
+    console.log(document.body.ChildNodes);
+    console.log(document.body.Children);
+
+}
+    </script>
+    <h1> Esto es un título</h1>
+    <p>Esto es un ejemplo </p>
+    <div> Esto es un div</div>
+  </body>
+</html>

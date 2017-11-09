@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 3</title>
+    <script type="text/javascript">
+    /*a. se modifique el texto de los 6 párrafos cuando se cargue
+    Desarrollo Web en Entorno Cliente
+    b. se sustituya el color de los párrafos por el seleccionado, cuando el usuario
+    pulse el botón.
+    Pista: el atributo value del nodo input de tipo color, almacena el color
+    seleccionado por el usuario*/
+
+    onload= function(){
+      for (var i = 0; i < document.getElementsByTagName('p').length; i++) {
+        document.getElementsByTagName('p')[i].innerHTML= "El numero es"+(i+1);
+      }
+      recorreTag=function(){
+        for (var i = 0; i < document.getElementsByTagName('p').length; i++) {
+          document.getElementsByTagName('p')[i].style.color=cambiame.children[0].value;
+      }
+    }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="contiene_ps">
+      <p>?</p>
+      <p>?</p>
+      <p>?</p>
+      <p>?</p>
+      <p>?</p>
+      <p>?</p>
+      <div id="cambiame">
+      <input type="color" id="txtColor" value="#FF0000">
+      <button id="actualizar"onclick="recorreTag();">Modificar los párrafos!</button>
+    </div>
+  </div>
+  </body>
+</html>

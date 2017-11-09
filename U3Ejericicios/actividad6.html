@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 6</title>
+    <script type="text/javascript">
+    /*Aquí se escribe lo que sea necesario
+    Crea una web con un titular de color azul y letra Arial y una imagen de 50px de ancho y
+    50px de alto a partir del html siguiente. Emplea para ello únicamente JS.*/
+    onload = function creaDOM(){
+    var titular= document.createElement("h1");
+    var texto=document.createTextNode('Aqui se mostrara el titulo de la imagen ("Audi a4 2014")');
+      titular.appendChild(texto);
+    document.body.appendChild(titular);
+    document.querySelector("h1").style.color= "blue";
+    document.querySelector("h1").style.fontType= "Arial";
+
+    var imagen=document.createElement('img');
+    document.body.appendChild(imagen);
+
+    var imagen1=document.querySelector('img');
+      imagen1.setAttribute("src","http://static.wixstatic.com/media/542730_593d9b88f74d49ffabf4797e786de3aa.png_256");
+      imagen1.style.height=("50px");
+      imagen1.style.weight=("50px");
+ }
+ </script>
+  </head>
+  <body>
+  </body>
+</html>
