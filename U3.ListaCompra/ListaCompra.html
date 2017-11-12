@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lista Compra</title>
+    <script type="text/javascript">
+    /*Cuando el usuario introduzca elementos en la caja de texto, seleccione una
+    categoría y pulse Añadir elemento, se añadirán elementos al final. Es decir, si
+    en la caja no hay un contenido o el selector no tiene una categoría asociada,
+    no se añadirá nada.
+    b. Los elementos introducidos deben estar coloreados con un color asociado a la
+    categoría a la que pertenecen (por ejemplo si los artículos fueran de
+    supermercado podrías poner fruta y verdura “green”, etc).
+    c. Si el usuario pulsa sobre un elemento introducido, debe borrarse dicho
+    elemento de la lista.
+    Pista: con querySelector, podemos seleccionar elementos utilizando
+    sintaxis de selectores CSS. Por ejemplo podemos emplear pseudoclases
+    como :hover.
+    d. Si el usuario pulsa sobre “Borrar lista” debe borrar toda la lista.*/
+    function añadirElemento(){
+      var textoCaja = document.getElementsByTagName("input")[0]
+      if(textoCaja.value == "" || selector.value == 0){
+     alert("Elige una categoria e introduce los productos:");
+    }else{
+     var p = document.createElement("p");
+     p.innerHTML = textoCaja.value;
+     document.body.appendChild(p);
+     p.style.color = selector.value;
+     p.setAttribute("onclick", "borrarLista()");
+   }
+ }
+    function borrarLista(){
+       var p= document.getElementsByTagName("p");
+       var limite= p.length;
+       for (var i = 0; i < limite  ; i++) {
+         p[0].parentNode.removeChild(p[0]);
+       }
+             }
+    </script>
+  </head>
+  <body>
+    <h1>Lista de la compra</h1>
+
+    <input type="text" name="texto" value=""></input>
+    <select  name="selector" id="selector">
+      <option value=>Escoge una opcion</option>
+      <option value="red">Carniceria</option>
+      <option value="navy">Pescaderia</option>
+      <option value="cyan">Congelados</option>
+      <option value="gold">Panaderia</option>
+      <option value="magenta">Perfumeria</option>
+    </select>
+    <button onclick="añadirElemento()">Añadir elemento</button>
+    <button onclick="borrarLista()">Eliminar lista</button>
+
+
+
+
+
+  </body>
+</html>
