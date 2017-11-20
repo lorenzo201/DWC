@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi centro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Inserta aquí el CSS de bootstrap -->
+
+    <style>
+      html, body{
+        height: 100%;
+      }
+      body{
+        font-family: Lucida, sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+      #contenido{
+        flex: 1 0 auto;
+      }
+      section {
+        padding: 10px;
+      }
+      header{
+        margin-bottom: 10px;
+      }
+      h1{
+        display: block;
+        width: 100%
+      }
+      footer {
+        padding: 5px;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- Inserta aquí el div container-fluid para que ocupe toda la página-->
+    <div id="contenido">
+        <div> <!--Convierte el div en una fila-->
+          <header>
+            <!-- Inserta el menú, debes tener en cuenta que el menú deberá ocupar todo el ancho de la pantalla siempre, el color que usaremos será
+            el de la clase bg-dark con el estilo navbar-dark-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Mi Instituto</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Moodle</a>
+            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="Nuestro Centro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Nuestro Centro
+            </a>
+            <div class="dropdown-menu" aria-labelledby="Nuestro Centro">
+              <a class="dropdown-item" href="#">Enseñanzas</a>
+              <a class="dropdown-item" href="#">Alumnado</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Profesorado</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Contactar</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscador</button>
+        </form>
+      </div>
+    </nav>
+          </header>
+        </div>
+        <div class="row pt-4" > <!-- Convierte el div en una fila -->
+            <!-- Inserta el login, debes tener en cuenta que ocupará el 25% mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+            <!--Incluye como color del botón el btn-success y configura que ocupe el 100% del espacio disponible-->
+            <div class="login col-xl-3 col-lg-3 col-md-3 col-sm-3 pt-3"> <!--Aquí dentro va el login-->
+              <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Usuario" id="exampleUsuario" aria-describedby="user" >
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Contraseña" id="exampleContraseña" >
+              </div>
+            <button type="submit" class="btn-success w-100">Enviar</button>
+            </form>
+            </div>
+            <!-- El contenido será de tamaño 75% mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+            <div class="col-xl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9">
+              <section class="row"> <!--Incluye en el section una clase fila-->
+                <article class="order-xl-1 order-lg-2 order-md-2  order-sm-2 order-2">
+                  <h1>Novedades</h1>
+                  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
+                      vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                      nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit
+                      amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis
+                      felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus
+                      enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur
+                      tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus
+                      et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat
+                      lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate
+                      quam. Ut vel rutrum justo. Donec quis lorem quam.
+                  </p>
+                </article>
+                <article class="order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1">
+                  <h1>Estudios ofertados</h1>
+                  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
+                      vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                      nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit
+                      amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis
+                      felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus
+                      enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur
+                      tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus
+                      et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat
+                      lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate
+                      quam. Ut vel rutrum justo. Donec quis lorem quam.
+                  </p>
+                </article>
+                <article class="d-sm-none d-md-block d-none order-xl-3 order-lg-3 order-md-3 order-sm-3 order-3">
+                  <h1>Contactar</h1>
+                  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
+                      vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                      nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit
+                      amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis
+                      felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus
+                      enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur
+                      tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus
+                      et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat
+                      lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate
+                      quam. Ut vel rutrum justo. Donec quis lorem quam.
+                  </p>
+                </article>
+              </section>
+            </div>
+        </div> <!--Hasta aquí debería llegar la row que incluye el login y las publicaciones -->
+    </div> <!--cierra div#contenido-->
+    <div class="row w-100 bg-dark text-white justify-content-center"> <!--Convierte el div en una fila -->
+      <!--El ancho debe ocupar el 100% y es de color de fondo bg-dark y de color de texto text-white y con alineación centrada-->
+      <footer>Diseño de interfaces web: Bootstrap &copy; </footer>
+    </div >
+    <!-- Inserta aquí los JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
