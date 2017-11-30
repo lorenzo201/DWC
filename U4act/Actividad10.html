@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad10</title>
+    <script type="text/javascript">
+    /*Realizar una web que incluya una imagen y un selector con una lista de 4 opciones
+    diferentes, de manera que al seleccionar un elemento de la lista, se actualice
+    automáticamente la imagen del documento. No debe existir un botón.*/
+    onload=function(){
+    selector.addEventListener("change",MarcaCoche);
+    function MarcaCoche() {
+    var coche= selector.value;
+    img.src = "coche" + selector.value+".jpg"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Elige marca Coche</h1>
+    <img  id="img" src="coche1.jpg" class="img" alt="coche1" width="200" height="200">
+    <br><select id="selector" name="MarcaCoche">
+      <option value="1">Audi</option>
+      <option value="2">BMW</option>
+      <option value="3">Mercedes</option>
+      <option value="4">Ford</option>
+    </select>
+  </body>
+</html>

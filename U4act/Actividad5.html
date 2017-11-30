@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 5</title>
+    <script type="text/javascript">
+    /*Incluye en la web anterior, un enlace con la frase “Deshabilitar cambio de imagen” con
+    el atributo href=”#nonavegar”. Cuando pulsemos en el enlace, deben deshabilitarse los
+    eventos anteriores y además el usuario no debe navegar al href del enlace*/
+    addEventListener("DOMContentLoaded",function(){
+     var cambImg = document.getElementsByTagName('img')[0];
+      cambImg.addEventListener("mouseout",foto1);
+      function foto1(){
+        cambImg.src="a.jpeg";
+      }
+      cambImg.addEventListener("mouseover",coche1);
+      function coche1(){
+          cambImg.src="coche1.jpg";
+
+        }
+        var sinEventos = document.getElementsByTagName("a")[0];
+          sinEventos.addEventListener("click",function(){
+          event.preventDefault();
+          cambImg.removeEventListener("mouseout",foto1);
+          cambImg.removeEventListener("mouseover",coche1);
+    })
+        });
+  </script>
+  </head>
+  <body>
+    <img  id="foto" src="coche1.jpg" class="img" alt="coche1" width="300" height="300">
+    <br><a href="#nonavegar">Deshabilita los eventos anteriores</a>
+  </body>
+</html>

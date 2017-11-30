@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad8</title>
+    <script type="text/javascript">
+    /*Realiza una web que muestre una imagen con un ancho de 150px y que permita hacer
+    zoom hasta 1024px. El zoom se hará en incrementos de 25px, cuando el usuario pulse
+    las teclas + y se deshará cuando pulse –. */
+    document.addEventListener("DOMContentLoaded",function(){
+    document.addEventListener("keydown",function(e){
+    var tamaño=document.getElementsByTagName("img")[0];
+        if (e.key =="+") {
+        if (tamaño.width<1024) {
+            tamaño.width+=25;
+        }else if (e.key=="-") {
+          wid.width= wid.width-25;
+        }
+      }
+    });
+  });
+    </script>
+  </head>
+  <body>
+    <img src="a.jpeg" alt="coche" width="150" >
+  </body>
+</html>

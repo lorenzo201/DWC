@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 7</title>
+    <script type="text/javascript">
+    /*Crea una web que muestre la tecla y el carácter que es pulsado (por ejemplo, esta web
+    tiene una funcionalidad similar: http://keycode.info/), y que indique por consola si es
+    un carácter especial.*/
+    onload = function() {
+      onkeydown = mostrarSiEspecial;
+      onkeypress = mostrarCaracter;
+
+    }
+    var especial;
+    function mostrarSiEspecial(e){
+      especial = e.altKey || e.ctrlKey || e.shiftKey || e.metaKey;
+      if (especial){
+      var mensaje = '';
+          mensaje ="<font size=8>"+e.keyCode+"</font>";
+          mensaje +="<font size=4>"+e.key+"</font>";
+        control.innerHTML = mensaje;
+      console.log("Estas usando una tecla especial");
+      }
+    }
+    function mostrarCaracter(e) {
+      //Sólo si la tecla genera un keypress es un carácter normal
+      var mensaje = '';
+      mensaje ="<center><font size=8>"+e.keyCode+"</font>";
+      mensaje +="<center><font size=4>"+ e.key+"</font>";
+      control.innerHTML= mensaje;
+    }
+    </script>
+  </head>
+  <body>
+    <h3>Pulsa una tecla:</h3>
+    <div id="control"> </div>
+  </body>
+</html>

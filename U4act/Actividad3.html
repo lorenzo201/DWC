@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Act3</title>
+    <script type="text/javascript">
+    /*Utilizando la información que proporciona event, realiza una web que muestre las
+    coordenadas X e Y del ratón por consola mientras el usuario pulse la letra shift y se
+    mueva por el elemento body.*/
+    function showCoords(event) {
+      var pulsarShift= event.shiftKey;
+          if(pulsarShift){
+      var x = event.clientX;
+      var y = event.clientY;
+      var coor = "X coords: " + x + ", Y coords: " + y;
+      console.log(coor);
+  }
+}
+    </script>
+  </head>
+  <body onmousemove="showCoords(event)">
+    <div id="div">
+      <p id="parrafo"> Este es el primer parrafo "ejemplo coordenadas"</p>
+      <p id="parrafo">  Parrafo numero 2 </p>
+      <p id="parrafo">  Parrafo numero 3</p>
+      <p id="parrafo">  Parrafo numero 4</p>
+      <p id="parrafo"> Parrafo numero 5</p>
+      <p id="parrafo"> Parrafo numero 6</p>
+      <p id="parrafo"> Parrafo numero 7 </p>
+      <p id="parrafo"> Este es el ultimo parrafo</p>
+        <p id="shift"></p>
+       </div>
+
+  </body>
+</html>

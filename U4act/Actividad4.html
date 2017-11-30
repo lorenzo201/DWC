@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad4</title>
+    <script type="text/javascript">
+    /*Utilizando el manejo de eventos del DOM 2, realiza una página que muestre una imagen
+    de manera que esa imagen cambie cuando el ratón pase por encima de la imagen y que
+    vuelva a cambiar cuando salga de ella*/
+    addEventListener("DOMContentLoaded",function(){
+     var cambImg = document.getElementsByTagName('img')[0];
+      cambImg.addEventListener("mouseout",foto1);
+      function foto1(){
+        cambImg.src="a.jpeg";
+      }
+      cambImg.addEventListener("mouseover",coche1);
+      function coche1(){
+          cambImg.src="coche1.jpg";
+        }
+        });
+  </script>
+  </head>
+  <body>
+    <img  id="foto" src="coche1.jpg" class="img" alt="coche1" width="300" height="300">
+  </body>
+</html>

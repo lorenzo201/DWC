@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Act2</title>
+  </head>
+  <script type="text/javascript">
+  /*Crea una web que contenga elementos p, a, div, h1, h2 y h3 con texto e incluye una
+  función de manejo de eventos, sin modificar el HTML creado, que cambie el color de
+  cualquier elemento sobre el que se hace doble click. */
+    addEventListener("dblclick", function(a){
+      a.target.style.color = "orange";
+    });
+  </script>
+  <body>
+    <div>
+    <p> Aquí tenemos un párrafo </p>
+    <a href="#">Ejemplo2</a>
+    <div class=""> Esto es un ejemplo div</div>
+    <h1>Esto es un ejemplo de manejo en h1</h1>
+    <h2>Esto es un ejemplo de manejo en h2</h2>
+    <h3>Esto es un ejemplo de manejo de eventos</h3>
+    <p id="color" ></p>
+</div>
+
+  </body>
+</html>

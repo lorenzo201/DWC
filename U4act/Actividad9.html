@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad9</title>
+    <script type="text/javascript">
+    /*Realiza una web que muestre las dimensiones de la ventana cuando se redimensione.*/
+      window.addEventListener("resize",ResizeDimensiones);
+
+      function ResizeDimensiones(){
+        var anchura = window.innerWidth;
+        var altura = window.innerHeight;
+          document.getElementById("dimensiones").innerHTML =anchura + "x" + altura;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="dimensiones"></p>
+    <h1>Pagina web con evento resize.</h1>
+    <p>-Redimensiona la web para ver sus dimensiones.</p>
+  </body>
+</html>

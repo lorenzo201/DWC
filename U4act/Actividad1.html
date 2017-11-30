@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad1</title>
+    <script type="text/javascript">
+    /*Crea una web que contenga elementos p, div, h1, h2 y h3 con texto que cambiarán su
+    contenido cuando se produzca un evento de la siguiente manera:
+    a. Incluye una manera distinta de asociar la función de manejo de eventos para
+    cada elemento.
+    b. Además, escoge un evento de ratón distinto para cada elemento salvo para el
+    elemento div que debe tener asociado el evento del menú secundario.
+    c. Impide que el menú secundario haga la acción que tiene asociada por defecto*/
+    function p(){
+       document.getElementsByTagName('p')[0].innerHTML="El parrafo a cambiado";
+     }
+
+    oncontextmenu = function(e){
+      e.preventDefault();
+      e.target.style.border = "3px solid yellow";
+    }
+    onload = function(){
+      h2.onclick = function(){
+        h2.style.backgroundColor = "blue";
+      }
+    }
+    addEventListener("DOMContentLoaded",function(){
+            document.querySelector("h3").onmouseover = function(){
+            document.querySelector("h3").innerHTML = "El ejemplo en h3 se a modificado";
+              }
+            });
+    </script>
+  </head>
+  <body>
+
+    <div>
+    <p onmousedown="p()"> Aquí tenemos un párrafo </p>
+    <div id="div" ondblclick="div.style.color='red'"> Esto es un ejemplo div</div>
+    <h1>Esto es un ejemplo de manejo en h1</h1>
+    <h2 id="h2">Esto es un ejmplo de manejo en h2</h2>
+    <h3 id="h3">Esto es un ejemplo de manejo de eventos</h3>
+
+
+</div>
+  </body>
+</html>
