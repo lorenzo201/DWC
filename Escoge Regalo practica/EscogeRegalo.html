@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad Escoge Regalo</title>
+    <style media="screen">
+    /*reseteo cajas y ordenar en el centro*/
+
+    body{
+      text-align: center;
+    background-image: url("fondo.jpg");
+    }
+    div{
+      width: 200px;
+      height: 200px;
+      margin:10px;
+      display:inline-block;
+    }
+    h1{
+    color:white;
+    font-size: 50px;
+    }
+
+    /*saldra texto encima al pasar el rato "tooltip"*/
+    /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: grey;
+    color:white;
+    text-align: center;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: relative;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+    </style>
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function(){
+       var i=0;
+       document.getElementById("carta1").addEventListener("click",sorp1);
+       function sorp1(){
+         i++;
+         console.log(i);
+         var moto = document.createElement("img");
+         carta1.appendChild(moto);
+         moto.setAttribute("src","moto.jpg");
+         moto.style.width="200px";
+         moto.style.height="200px";
+         alert("Te ha tocado una moto");
+         if(i%2!=0){
+           document.getElementById("carta1").removeEventListener("click",sorp1);
+           document.getElementById("carta2").removeEventListener("click",sorp2);
+           document.getElementById("carta3").removeEventListener("click",sorp3);
+         }
+       }
+       document.getElementById("carta2").addEventListener("click",sorp2);
+       function sorp2(){
+         i++;
+         console.log(i);
+         var entrada = document.createElement("img");
+         carta2.appendChild(entrada);
+         entrada.setAttribute("src","entradaFutbol.jpg");
+         entrada.style.width="200px";
+         entrada.style.height="200px";
+         alert("Te ha tocado 2 entradas a cualquier partido de esta temporada");
+         if(i%2!=0){
+           document.getElementById("carta1").removeEventListener("click",sorp1);
+           document.getElementById("carta2").removeEventListener("click",sorp2);
+           document.getElementById("carta3").removeEventListener("click",sorp3);
+         }
+       }
+       document.getElementById("carta3").addEventListener("click",sorp3);
+       function sorp3(){
+              i++;
+                console.log(i);
+         var viaje = document.createElement("img");
+          carta3.appendChild(viaje);
+          viaje.setAttribute("src","viaje.jpeg");
+          viaje.style.width="200px";
+          viaje.style.height="200px";
+            alert("Te ha tocado 2 billetes de avion a Italia");
+              if(i%2!=0){
+                  document.getElementById("carta1").removeEventListener("click",sorp1);
+                  document.getElementById("carta2").removeEventListener("click",sorp2);
+                  document.getElementById("carta3").removeEventListener("click",sorp3);
+         }
+       }
+  })
+    </script>
+  </head>
+  <body>
+  <h1>Escoge un regalo</h1>
+  <br><br>
+    <div id="carta1" class="tooltip">
+      <img src="carta.png" alt="carta" width ="200" height="200">
+      <span class="tooltiptext carta1">Te divertiras mucho manejando esto por la carretera</span>
+    </div>
+    <div id="carta2" class="tooltip" >
+      <img src="carta.png" alt="carta" width ="200" height="200">
+      <span class="tooltiptext carta2">Si te gustan los partidos de futbol elige este regalo</span>
+  </div>
+    <div id="carta3" class="tooltip" >
+      <img src="carta.png" alt="carta" width ="200" height="200">
+      <span class="tooltiptext carta3">Si te gustan las excursiones ,te gustara este regalo</span>
+    </div>
+  </body>
+</html>
