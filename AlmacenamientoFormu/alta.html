@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web alta.html</title>
+    <script type="text/javascript">
+    /*Incorpora el js a la página de alta.html para leer el contenido
+    almacenado en cliente sobre el usuario.*/
+    function getCookie(name) {
+      var nameEq = name + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0;i < x.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEq) == 0) return c.substring(nombC.length,c.length);
+        }
+      return null;
+      }
+      document.body.innerHTML += "<p>El correo es:" localStorage.getItem("Correo")+"</p>";
+      document.body.innerHTML += "<p>El dni es:" sessionStorage.getItem("dni")+"</p>";
+      document.body.innerHTML += "<p>El nombre almacenado en cookie :" + getCookie("nombre") + "</p>";
+      document.body.innerHTML += "<p>El apellido almacenado en cookie :"+ getCookie("apellidos") + "</p>";
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Esta es la pagina web Alta.html</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.</p>
+  </body>
+</html>
