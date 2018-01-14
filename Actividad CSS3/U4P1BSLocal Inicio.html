@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi centro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--JS Popper-->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/popper.min.js" charset="utf-8"></script>
+
+    <!--JS JQuery-->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/jquery-3.2.1.slim.min.js" charset="utf-8"></script>
+    <!--JS Bootstrap-->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- Inserta aquí el CSS de bootstrap -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+
+    <!-- Ejemplo de fuente externa -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> <!--Fuente externa-->
+
+    <!--Estilo para los Sprites de los titulares-->
+    <link rel="stylesheet" href="estiloSprite.css">
+
+    <!-- Enlace a font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* Estilos base de la página */
+      body{
+        font-family: Montserrat, sans-serif;/*Fuente externa*/
+      }
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        margin-bottom: 100px; /* Margin bottom by footer height */
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px; /* Set the fixed height of the footer here */
+        /*line-height: 200px; /* Vertically center the text there */
+        padding: 5px;
+      }
+      footer p{
+        padding-top: 5px;
+      }
+      section {
+        padding: 10px;
+      }
+      article{
+        display: block;
+        width: 100%;
+      }
+      header{
+        margin-bottom: 10px;
+      }
+      h1{
+        display: block;
+        width: 100%
+      }
+      /* Aquí empieza el estilo de Font-icons del pie */
+      footer ul li {
+          list-style-type: none;
+          display: inline-block;
+      }
+      footer ul li a i {
+        background: #205D7A;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        text-align: center;
+        margin-right: 10px;
+        padding-top: 15%;
+        transition: all 0.2s ease-in-out;
+      }
+      i.fa{
+        font-size: 1.2rem;
+      }
+      .fa-facebook {
+	       background:#3b5998
+       }
+      .fa-linkedin {
+	        background:#007bb6
+      }
+      .fa-twitter {
+	        background:#00aced
+       }
+      .fa-google-plus {
+	        background:#dd4b39
+      }
+      /*Cuando se ponga el foco sobre los input de la web (login, password y
+       buscador), deben transformarse aumentando su tamaño un 10%.*/
+      .form-control:hover{
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+      footer ul li a i:hover {
+        background: white;
+        color: black;
+      }
+      /* Cuando el ratón se sitúe sobre los iconos de redes sociales del pie, debe
+      producirse una transición que dure 3s que reduzca el radio del borde de los
+      iconos al 5% y que modifique el color de la letra y del fondo*/
+      footer ul li a i:hover{
+        border-radius: 5%;
+        -webkit-transition: background-color 3s;
+        -moz-transition: background-color 3s;
+        -o-transition: background-color 3s;
+        -ms-transition: background-color 3s;
+        transition: background-color 3s;
+
+      }
+      /* Hasta aquí el estilo de Font-icons del pie */
+      /*Se debe aplicar una animación sobre otro elemento de la web (imágenes,h1’s o textos…) que:
+      a. Modifique al menos 2 propiedades CSS.
+      b. Emplee un mínimo de 3 estados.*/
+      @keyframes propiedadesAnimacion{
+          from{color: green;margin-left: 100px;}
+          to{font-weight: bold;margin-left: 400px;}
+        }
+        article:hover p {
+          animation-name: propiedadesAnimacion;
+          animation-duration: 2s;
+          animation-iteration-count: 1;
+        }
+        /*cambio de color el h1*/
+        @keyframes propiedadesAni{
+            from{color: Red;}
+            to{font-weight: bold;}
+          }
+          article:hover h1 {
+            animation-name: propiedadesAni;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+          }
+
+        @keyframes TresEstadosAnim{
+         0% {margin-left: 10px;width: 20%;}
+         50%{margin-left: 150px;width: 30%;transform:rotate(360deg);}
+         100% {margin-left: 10px;width:10%;transform:rotate(720deg);}
+       }
+       figure:hover img{
+         animation-name: TresEstadosAnim;
+         animation-duration: 2s;
+         animation-iteration-count: 3;
+       }
+
+
+      /*Estilo para las imágenes*/
+      article figure img{
+        width: 25%;
+        height: auto;
+        margin-left: 30px;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- inserta aquí el div container-fluid para que ocupe toda la página-->
+    <div id="contenido">
+      <div class="row">
+        <header class="w-100 sticky-top">
+            <!-- Inserta el menú, debes tener en cuenta que el menú deberá ocupar todo el ancho de la pantalla siempre, el color que usaremos será
+            el de la clase bg-dark -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">Mi instituto</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Moodle</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Nuestro centro
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Enseñanzas</a>
+                      <a class="dropdown-item" href="#">Alumnado</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Profesorado</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contactar</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscador</button>
+                </form>
+              </div>
+            </nav>
+        </header>
+      </div>
+        <!-- Inserta otra fila aquí en la que incluyas todo salvo el pie-->
+        <div class="row">
+              <!-- Inserta el login, debes tener en cuenta que ocupará el 25% mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="col-lg-12 col-md-12 col-sm-12 col-12 btn btn-success">Enviar</button>
+                  </form>
+              </div>
+              <!-- El contenido será de tamaño 75% mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+                  <section class="row">
+                    <article>
+                      <h1><i class="icon-novedades"></i>Novedades</h1>
+                      <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
+                          vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                          nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit
+                          amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis
+                          felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus
+                          enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur
+                          tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus
+                          et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat
+                          lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate
+                          quam. Ut vel rutrum justo. Donec quis lorem quam.
+                      </p>
+                    </article>
+                    <article>
+                      <h1><i class="icon-estudios"></i>Estudios ofertados</h1>
+                      <p>DAW y ASIR son dos de los estudios ofertados en los que aprenderás...</p>
+                      <figure>
+                        <img src="css3.svg" alt="logo css3">
+                        <img src="html5.svg" alt="logo html5">
+                      </figure>
+                  </article>
+                  <article>
+                    <h1><i class="icon-contactar"></i>Contactar</h1>
+                    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
+                        vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                        nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit
+                        amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis
+                        felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus
+                        enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur
+                        tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus
+                        et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat
+                        lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate
+                        quam. Ut vel rutrum justo. Donec quis lorem quam.
+                    </p>
+                  </article>
+              </section>
+        </div> <!--cierra row-->
+    </div> <!--cierra div#contenido-->
+    <div class="row">
+      <!--El ancho debe ocupar el 100% y es de color de fondo bg-dark y de color de texto text-white-->
+      <footer class="w-100 bg-dark text-center">
+        <p class="text-white">Diseño de interfaces web: Bootstrap &copy;</p>
+        <ul>
+            <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i> </a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

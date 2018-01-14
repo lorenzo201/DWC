@@ -1,0 +1,101 @@
+/* Estilos base de la página */
+body{
+  font-family: Montserrat, sans-serif;/*Fuente externa*/
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 100px; /* Margin bottom by footer height */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* Set the fixed height of the footer here */
+  /*line-height: 200px; /* Vertically center the text there */
+  padding: 5px;
+}
+footer p{
+  padding-top: 5px;
+}
+section {
+  padding: 10px;
+}
+article{
+  display: block;
+  width: 100%;
+}
+header{
+  margin-bottom: 10px;
+}
+h1{
+  display: block;
+  width: 100%
+}
+
+/*Estilo para los sprites*/
+article h1 i{
+  background: url('./iconos/spriteIconos.png');
+  display: inline-block;
+}
+
+.icon-novedades {
+  background-position:0 -30px;
+  height: 30px;
+  width: 39px;
+}
+
+.icon-estudios {
+  background-position:0 -60px;
+  height: 30px;
+  width: 44px;
+}
+
+.icon-contactar {
+  background-position: 0 0;
+  height: 30px;
+  width: 30px;
+}
+/*Aquí termina el estilo para los sprites*/
+
+/* Aquí empieza el estilo de Font-icons del pie */
+footer ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+footer ul li a i {
+  background: #205D7A;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 15%;
+  transition: all 0.2s ease-in-out;
+}
+i.fa{
+  font-size: 1.2rem;
+}
+.fa-facebook {
+   background:#3b5998
+ }
+.fa-linkedin {
+    background:#007bb6
+}
+.fa-twitter {
+    background:#00aced
+ }
+.fa-google-plus {
+    background:#dd4b39
+}
+/* Hasta aquí el estilo de Font-icons del pie */
+
+/*Estilo para las imágenes*/
+article figure img{
+  width: 25%;
+  height: auto;
+  margin-left: 30px;
+}
