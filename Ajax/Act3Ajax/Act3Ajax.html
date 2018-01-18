@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+    </style>
+    <meta charset="utf-8">
+    <title>Ejemplo Buscador Provincias</title>
+    <script type="text/javascript">
+    /*Realiza un buscador que sugiera nombres a partir de las letras que va escribiendo el
+usuario. Emplea sugerencias.php para obtener las sugerencias.*/
+
+      var xhr = new XMLHttpRequest();
+      onload = function(){
+        buscador.onkeyup = function(){
+            parrafo.style.display="block";
+          var str = buscador.value;
+          console.log(str);
+          xhr.open("GET","U6Ej3Sugerencias.php?q=" + str, true);
+          xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status == 200){
+              resultado.innerHTML = xhr.responseText ;
+            }
+          }
+          xhr.send();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form method="GET" id="formulario">
+    <div id="container">
+      <p id="parrafo"><span id="resultado" ></span></p>
+      <h1>Provincias Buscador</h1>
+      <input type="text" id="buscador" placeholder="Escriba el nombre..." >
+    </input>
+</form>
+</div>
+  </body>
+</html>

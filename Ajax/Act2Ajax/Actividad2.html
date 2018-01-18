@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 2</title>
+    <style media="screen">
+      h1{
+      text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+    /*Realiza una web de noticias que muestre por pantalla un contenido solicitado de manera
+    random de entre 4 titulares posibles, cada vez que se carga.*/
+      onload=function(){
+        if (window.XMLHttpRequest) {
+        var notic = new XMLHttpRequest();
+        }else if (ActiveXObject("Microsoft.XMLHTTP")) {
+          var notic = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var x = Math.floor((Math.random()*4)+1);
+        var url = "noticia"+x+".txt";
+        notic.open("GET",url,true);
+        notic.onreadystatechange = resultado;
+        notic.send();
+        function resultado(){
+        if (notic.readyState == 4 && notic.status==200) {
+        noticia.innerHTML = notic.responseText;
+        }else if(notic.status!=200){
+        alert(notic.statusText);
+        }
+        /*. En la zona "Estados de la petición" se debe mostrar en todo momento el estado
+        en el que se encuentra la petición (No inicializada, cargando, completada, etc.)
+        b. Mostrar el contenido de todas las cabeceras de la respuesta del servidor en la
+        zona "Cabeceras HTTP de la respuesta del servidor".
+        c. Mostrar el código y texto de estado de la respuesta del servidor en la zona
+        "Código de estado".*/
+        Peticion.innerHTML ="Aqui mostramos el estado de la peticion: "+ notic.readyState;
+        Cabecera.innerHTML ="Aqui mostramos el contenido de las cabeceras a respuesta del servidor:"+ notic.getAllResponseHeaders();
+        Codigo.innerHTML ="Aqui se muestra el codigo  del estado a la respuesta del servidor:"+ notic.statusText;
+      }
+      };
+      };
+
+    </script>
+  </head>
+  <body>
+    <h1>Noticia</h1>
+    <p id="Noticia"></p>
+    <div id="Peticion"></div>
+    <div id="Cabecera"></div>
+    <div id="Codigo"></div>
+  </body>
+</html>

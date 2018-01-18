@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad1</title>
+    <style media="screen">
+      h1{
+      text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+    /*Realiza una web de noticias que muestre por pantalla un contenido solicitado de manera
+    random de entre 4 titulares posibles, cada vez que se carga.*/
+      onload=function(){
+        if (window.XMLHttpRequest) {
+        var notic = new XMLHttpRequest();
+        }else if (ActiveXObject("Microsoft.XMLHTTP")) {
+          var notic = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var x = Math.floor((Math.random()*4)+1);
+        var url = "noticia"+x+".txt";
+        notic.open("GET",url,true);
+        notic.onreadystatechange = resultado;
+        notic.send();
+        function resultado(){
+        if (notic.readyState == 4 && notic.status==200) {
+        noticia.innerHTML = notic.responseText;
+        }else if(notic.status!=200){
+        alert(notic.statusText);
+        };
+        };
+       };
+
+    </script>
+  </head>
+  <body>
+    <h1>Noticia</h1>
+    <p id="noticia"></p>
+  </body>
+</html>

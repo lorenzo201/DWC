@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad5</title>
+    <style media="screen">
+      h1{
+      text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+    /*Realiza el ejercicio 1 empleando JQuery en la llamada a Ajax y en el manejo del DOM*/
+      onload=function(){
+        if (window.XMLHttpRequest) {
+        var notic = new XMLHttpRequest();
+        }else if (ActiveXObject("Microsoft.XMLHTTP")) {
+          var notic = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var x = Math.floor((Math.random()*4)+1);
+        var url = "noticia"+x+".txt";
+        $("#noticia").load(url);
+     });
+       };
+    </script>
+  </head>
+  <body>
+    <h1>Noticia</h1>
+    <p id="noticia"></p>
+  </body>
+</html>

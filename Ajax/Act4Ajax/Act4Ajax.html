@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad 4 Formulario</title>
+    <script type="text/javascript">
+      if (XMLHttpRequest){
+        var form = new XMLHttpRequest();
+      }else if(ActiveXObject("Microsoft.XMLHTTP")){
+        var form  = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      onload = function(){
+        document.forms[0].onsubmit = function(e){
+        e.preventDefault();
+        var url = "U6Ej4LoginJSON.php";
+        form .open("POST",url,true);
+        form .onreadystatechange = function(){
+          if(form .readyState == 4 && form .status == 200){
+          var resp = form .responseText;
+          document.getElementById("resLogin").innerHTML = resp;
+          var y = JSON.parse(resp);
+          if(y.res){
+          localStorage.setItem("token",y.token);
+          document.forms[0].action="homeLogado.html";
+          document.forms[0].submit();
+          }else{
+          alert("Tienes algun error");
+          }
+          }
+        }
+
+        function logindatos(){
+          var user = document.getElementById("usuario").value;
+          var pass = document.getElementById("password").value;
+          var log = "usuario=" + encodeURIComponent(us) + "&password=" + encodeURIComponent(pass);
+          return log;
+            }
+            form .setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var LogDatos = logindatos();
+            form .send(LogDatos);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="#" method="post">
+      <div>Usuario: <input type="text" id="usuario" maxlength="30"></input></div>
+      <div>Contraseña: <input type="password" id="password"></input></div>
+      <div id="resLogin"></div>
+      <input type="submit"  id="enviar" value="Enviar"></input>
+    </form>
+  </body>
+</html>
