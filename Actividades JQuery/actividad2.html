@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("img").width(400);
+  $(".contenedor").css("text-align","center");
+  $("h1").css({"text-align":"center"});
+
+  $("img, button").hide();
+  var boton =true;
+
+  $("img, button").hide();
+  var boton =true;
+
+  $("h1").click(function(){
+  if(boton==true){
+  $("h1").html("Haz click en este titulo para ocultar la imagen!");
+       $("img,button").toggle();
+       boton=false;
+     }else{
+       $("h1").html("Haz click en este titulo para desplegar la imagen!");
+       $("img,button").toggle();
+       boton=true;
+     }
+   });
+   //aumenta y disminuye el tamaño de la foto apretando los botones
+      $("button#masAncho").click(function(){
+        $("img").width($("img").width()*1.4);
+      $("button#menosAncho").click(function(){
+        $("img").width($("img").width()/1.4);
+        });
+});
+});
+</script>
+<style media="screen">
+  h1{
+    text-align: center;
+  }
+  body{
+    text-align:center;
+  }
+  img{
+    width: 400px;
+    height: 400px;
+  }
+</style>
+</head>
+<body>
+ <h1>Haz click aquí para desplegar la imagen!</h1>
+ <div class="contenedor">
+ <img src="mundo.png">
+ <button id="masAncho">+</button>
+ <button id="menosAncho">-</button>
+ </div>
+</body>
+</html>

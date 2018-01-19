@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+/*Empleando show(), hide() y/o toggle(), realiza una página que muestre una bombilla
+encendida o apagada cuando pulsemos un botón que haga de interruptor. El botón
+deberá cambiar el valor que muestra para poner “Enciende” o “Apaga”
+dependiendo del estado de la bombilla.*/
+$(document).ready(function(){
+      $("img#Encender").hide();
+        var foto = true;
+        $("#boton").click(function(){
+        if(foto){
+          foto = false;
+          $("img#Apagar").hide();
+          $("img#Encender").show();
+          $("#boton").text("Apagar");
+           }else{
+             foto = true;
+              $("img#Apagar").show();
+              $("img#Encender").hide();
+              $("#boton").text("Encender");
+          }
+        });
+ });
+</script>
+<style media="screen">
+  h1{
+    text-align: center;
+  }
+
+  img{
+    width: 200px;
+    height: 200px;
+  }
+</style>
+</head>
+<body>
+ <h1>Imagenes de bombillas apagadas y encendidas</h1>
+ <button type="button" id="boton">Encender</button>
+ <img src="bombillaEncendida.jpeg" id="Encender">
+ <img src="bombillaApagada.jpeg" id="Apagar">
+
+
+
+ </div>
+</body>
+</html>
