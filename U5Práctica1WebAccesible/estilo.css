@@ -1,0 +1,148 @@
+* {
+	margin: 0px; padding: 0px;
+	font-family: arial, helvetica, sans-serif; color: #0bb664; background: #FFFFFF;
+	line-height: 1.3em;
+}
+
+/* Para que siempre aparezca la barra de desplazamiento vertical de la ventana del navegador */
+html {
+	overflow: scroll;
+}
+
+body {
+	margin: 10px;
+}
+
+h1 {
+	font-size: 1.6em;
+}
+
+h2, #primeros p, #segundos p, #postres p {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+h3 {
+	margin-top: 20px;
+	font-size: 1.2em;
+}
+
+h4 {
+	margin-top: 10px;
+	font-size: 1.1em;
+}
+
+ul {
+	margin-left: 10px;
+}
+
+li {
+	margin: 5px;
+}
+
+p {
+	margin: 5px;
+}
+
+p span{
+	font-style: italic;
+}
+
+a {
+	color: #598eff; text-decoration: none; border-bottom: 1px dotted #598eff;
+}
+
+a:visited {
+	color: #598eff; border-bottom: 1px solid #598eff;
+}
+
+a:focus, a:hover {
+	color: #003366; background: #CCCCCC; border-bottom: 1px solid #003366;
+}
+
+img{
+	width: 85px;
+}
+
+#titulo {
+	height: 90px;
+}
+
+#titulo #texto {
+	float: left;
+	width: 60%;
+}
+
+#titulo p {
+	font-size: 1.2em;
+}
+#titulo #logo{
+	float: left;
+	width: 40%;
+}
+
+#navegacion {
+	position: absolute; left: 10px; top: 100px; width: 200px;
+}
+
+#navegacion h2 {
+	display: none;
+}
+
+#navegacion ul {
+	margin-left: 10px;
+}
+
+#navegacion li {
+	list-style-type: none;
+}
+
+#contenido {
+	margin-left: 201px; margin-right: 201px;
+}
+
+#contenido div {
+	margin-left: 10px;
+}
+
+/* Esconde todos los apartados del contenido excepto presentación */
+#primeros, #segundos, #postres {
+	display: none;
+}
+
+#lateral {
+	position: absolute; right: 10px; top: 100px; width: 200px;
+}
+
+#lateral h2, #lateral ul {
+	margin-left: 10px;
+	font-size: 1.2em;
+}
+
+#lateral li {
+	list-style-type: none;
+	font-size: 0.8em;
+}
+
+#pie {
+	padding-top: 30px; padding-bottom: 30px; text-align: center;
+}
+
+#pie h2 {
+	display: none;
+}
+
+#pie li {
+	display: inline; list-style-type: none;
+}
+
+#pie a {
+	border: 0px;
+
+}
+
+/* Para ocultar algo en los navegadores gráficos */
+.oculta {
+  position: absolute;
+  top: -5000px;
+}
