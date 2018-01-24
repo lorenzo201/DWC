@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo Flickr</title>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<style media="screen">
+	body{
+		text-align: center;
+		background-color: gray;
+	}
+	img{
+		width: 125px;
+		height: 125px;
+	}
+</style>
+<script type="text/javascript">
+//1.Realiza una página que permita cargar 10 imágenes a partir del API de Flickr para formatos JSON.
+//2.. Incluye al menos 7 categorías a escoger
+//3.Formatea las imágenes para que sean todas iguales
+//4.Elimina las imágenes existentes cuando el usuario vuelva a emplear el selector
+	$(document).ready(function() {
+
+		$("button").click(function(){
+			var valor = $("#selector").val();
+			var url = "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
+			url += valor + "&format=json&jsoncallback=?";
+			$.getJSON(url,function(data,st,xhr){
+
+				if(st =="success"){
+				$("#imagenes").empty();
+				var i = 0;
+				var randomfotos=data.items;
+				$.each(randomfotos,function(i, item){
+					if(i<10){
+						var foto = item.media.m;
+						var x = document.createElement("img");
+						x.setAttribute("src",foto);
+						imagenes.appendChild(x);
+						i++;
+						}
+					});
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Mi Flickr</h1>
+	<div id="imagenes">	</div>
+	<button> Dibujar</button>
+	<select id="selector">
+	<option value="Audi">Audi</option>
+	<option value="BMW">BMW</option>
+	<option value="Mustang">Mustang</option>
+	<option value="Ford">Ford</option>
+	<option value="Ferrari">Ferrari</option>
+	<option value="Renault">Renault</option>
+	<option value="Mazda">Mazda</option>
+	</select>
+</body>
+</html>
